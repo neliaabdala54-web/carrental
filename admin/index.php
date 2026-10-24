@@ -331,7 +331,7 @@ if(isset($_POST['login']))
 							<circle cx="12" cy="7" r="4"></circle>
 						</svg>
 					</span>
-					<input type="text" name="username" class="custom-input" placeholder="ex: admin" value="admin" required autocomplete="username">
+					<input type="text" name="username" class="custom-input" placeholder="Digite o seu utilizador" required autocomplete="username">
 				</div>
 			</div>
 
@@ -345,7 +345,7 @@ if(isset($_POST['login']))
 							<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
 						</svg>
 					</span>
-					<input type="password" id="admin_password" name="password" class="custom-input" placeholder="••••••••" value="admin" required autocomplete="current-password">
+					<input type="password" id="admin_password" name="password" class="custom-input" placeholder="••••••••" required autocomplete="current-password">
 					<span class="input-icon-right" onclick="togglePass('admin_password', 'eye_icon')" title="Mostrar/Ocultar Senha">
 						<svg id="eye_icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 							<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -373,11 +373,6 @@ if(isset($_POST['login']))
 			</button>
 
 		</form>
-
-		<!-- Caixa de Credenciais e Voltar ao Portal -->
-		<div class="cred-box">
-			<strong>Acesso Rápido:</strong> Utilizador: <code>admin</code> | Senha: <code>admin</code>
-		</div>
 
 		<a href="../index.php" class="return-portal-link">
 			<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
