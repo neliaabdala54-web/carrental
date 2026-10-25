@@ -1,0 +1,26 @@
+DirectoryIndex index.html index.htm index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index\.php$ /carrental/admin/index.html [R=302,L]
+  RewriteRule ^dashboard\.php$ /carrental/admin/dashboard.html [R=302,L]
+  RewriteRule ^manage-brands\.php$ /carrental/admin/brands.html [R=302,L]
+  RewriteRule ^create-brand\.php$ /carrental/admin/brand-form.html [R=302,L]
+  RewriteRule ^edit-brand\.php$ /carrental/admin/brand-form.html [R=302,L,QSA]
+  RewriteRule ^manage-subscribers\.php$ /carrental/admin/records.html?type=subscribers [R=302,L]
+  RewriteRule ^manage-conactusquery\.php$ /carrental/admin/records.html?type=contacts [R=302,L]
+  RewriteRule ^reg-users\.php$ /carrental/admin/records.html?type=users [R=302,L]
+  RewriteRule ^new-bookings\.php$ /carrental/admin/bookings.html?status=pending [R=302,L]
+  RewriteRule ^confirmed-bookings\.php$ /carrental/admin/bookings.html?status=confirmed [R=302,L]
+  RewriteRule ^canceled-bookings\.php$ /carrental/admin/bookings.html?status=cancelled [R=302,L]
+  RewriteRule ^manage-bookings\.php$ /carrental/admin/bookings.html?status=all [R=302,L]
+  RewriteRule ^bookig-details\.php$ /carrental/admin/booking-details.html [R=302,L,QSA]
+  RewriteRule ^testimonials\.php$ /carrental/admin/testimonials.html [R=302,L]
+  RewriteRule ^manage-pages\.php$ /carrental/admin/settings.html?setting=pages [R=302,L,QSA]
+  RewriteRule ^update-contactinfo\.php$ /carrental/admin/settings.html?setting=contact [R=302,L]
+  RewriteRule ^manage-vehicles\.php$ /carrental/admin/vehicles.html [R=302,L]
+  RewriteRule ^post-avehical\.php$ /carrental/admin/vehicle-form.html [R=302,L]
+  RewriteRule ^edit-vehicle\.php$ /carrental/admin/vehicle-form.html [R=302,L,QSA]
+  RewriteRule ^changeimage([1-5])\.php$ /carrental/admin/vehicle-form.html?image=$1 [R=302,L,QSA]
+  RewriteRule ^change-password\.php$ /carrental/admin/change-password.html [R=302,L]
+</IfModule>

@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Aluguer de Carros</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/site-overrides.css?v=2" type="text/css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/owl.transitions.css" type="text/css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/switcher/css/switcher.css" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true">
+  <link rel="alternate stylesheet" href="assets/switcher/css/orange.css" title="orange" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/blue.css" title="blue" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/pink.css" title="pink" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/green.css" title="green" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/purple.css" title="purple" media="all">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon-icon/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon-icon/apple-touch-icon-114-precomposed.html">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon-icon/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/images/favicon-icon/apple-touch-icon-57-precomposed.png">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
+<body>
+  <div id="site-switcher"></div>
+  <div id="site-header">
+    <header style="background-color: #ffffff; border-bottom: 2px solid #e2e8f0; height: 58px; min-height: 58px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+      <nav id="navigation_bar" class="navbar navbar-default" style="background-color: #ffffff; margin: 0; border: none; height: 58px; min-height: 58px;">
+        <div class="container" style="height: 58px; display: flex; align-items: center; justify-content: space-between; width: 100%; padding-left: 15px; padding-right: 15px;">
+          <div class="navbar-header" style="display: flex; align-items: center; height: 58px;">
+            <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button" style="background-color: #111; border-color: #111; margin-top: 10px; margin-bottom: 10px; border-radius: 0;"><span class="sr-only">Navegação</span><span class="icon-bar" style="background-color: #fff;"></span><span class="icon-bar" style="background-color: #fff;"></span><span class="icon-bar" style="background-color: #fff;"></span></button>
+            <div class="logo" style="display: flex; align-items: center; height: 58px; padding: 0;"><a href="index.html" style="display: flex; align-items: center; height: 100%;"><img src="assets/images/logo.png" alt="Logo" style="max-height: 38px; width: auto; object-fit: contain;"></a></div>
+          </div>
+          <div class="collapse navbar-collapse" id="navigation" style="height: 58px !important; padding: 0; margin-left: auto; margin-right: 20px;"><ul class="nav navbar-nav" style="margin: 0; display: flex; align-items: center; height: 58px;">
+            <li style="height: 58px;"><a href="index.html" class="custom-nav-link">Início</a></li>
+            <li style="height: 58px;"><a href="page.html?type=aboutus" class="custom-nav-link">Sobre nós</a></li>
+            <li style="height: 58px;"><a href="car-listing.html" class="custom-nav-link">Explorar</a></li>
+            <li style="height: 58px;"><a href="contact-us.html" class="custom-nav-link">Contacte-nos</a></li>
+          </ul></div>
+          <div class="header_wrap" style="display: flex; align-items: center; gap: 12px; height: 58px; padding: 0;">
+            <div class="header_search_box" style="display: flex; align-items: center; height: 36px;"><form action="search-results.html" method="get" id="header-search-form" style="margin: 0; display: flex; align-items: center; background-color: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; padding: 0 8px; height: 36px; box-sizing: border-box;"><input type="text" placeholder="Pesquisar..." name="q" class="form-control" required style="background: transparent; border: none; color: #1a202c; height: 36px; padding: 0 6px; font-size: 13px; outline: none; width: 140px; border-radius: 0; line-height: 36px; box-shadow: none;"><button type="submit" style="background: transparent; border: none; color: #fa2823; font-size: 14px; cursor: pointer; padding: 0 4px; height: 36px; display: flex; align-items: center;"><i class="fa fa-search" aria-hidden="true"></i></button></form></div>
+            <div class="user_login" id="user-login" style="display: flex; align-items: center; height: 36px;"><a href="#loginform" class="btn header-btn-uniform" data-toggle="modal" data-dismiss="modal" style="background-color: #fa2823; color: #ffffff; border: none; text-decoration: none;">Entrar / Cadastrar</a></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </div>
+  <section id="banner-slider" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false" style="position: relative; overflow: hidden; background: #000;">
+    <ol class="carousel-indicators"><li data-target="#banner-slider" data-slide-to="0" class="active"></li><li data-target="#banner-slider" data-slide-to="1"></li><li data-target="#banner-slider" data-slide-to="2"></li><li data-target="#banner-slider" data-slide-to="3"></li></ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active" style="height: 480px; background: url('assets/images/banner-image.jpg') center center / cover no-repeat;"></div>
+      <div class="item" style="height: 480px; background: url('assets/images/banner-image-1.jpg') center center / cover no-repeat;"></div>
+      <div class="item" style="height: 480px; background: url('assets/images/banner-image-2.jpg') center center / cover no-repeat;"></div>
+      <div class="item" style="height: 480px; background: url('assets/images/aboutus-page-header-img.jpg') center center / cover no-repeat;"></div>
+    </div>
+    <a class="left carousel-control" href="#banner-slider" role="button" data-slide="prev" style="background: none; width: 5%;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true" style="font-size: 30px;"></span><span class="sr-only">Anterior</span></a>
+    <a class="right carousel-control" href="#banner-slider" role="button" data-slide="next" style="background: none; width: 5%;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true" style="font-size: 30px;"></span><span class="sr-only">Próximo</span></a>
+  </section>
+  <section class="section-padding gray-bg">
+    <div class="container"><div class="section-header text-center">
+      <h2>Encontre o Melhor <span>Carro Para Si</span></h2>
+      <p>Oferecemos uma vasta gama de veículos modernos, confortáveis e seguros para atender a todas as suas necessidades de transporte e viagens com as melhores tarifas do mercado.</p>
+    </div><div class="row"><div class="recent-tab"><ul class="nav nav-tabs" role="tablist"><li role="presentation" class="active"><a href="#resentnewcar" role="tab" data-toggle="tab">Veículos Recentes</a></li></ul></div>
+      <div class="tab-content"><div role="tabpanel" class="tab-pane active" id="resentnewcar"><div id="recent-cars" class="row"></div></div></div>
+    </div></div>
+  </section>
+  <section class="fun-facts-section"><div class="container div_zindex"><div class="row">
+    <div class="col-lg-3 col-xs-6 col-sm-3"><div class="fun-facts-m"><div class="cell"><h2><i class="fa fa-calendar" aria-hidden="true"></i>10+</h2><p>Anos no Mercado</p></div></div></div>
+    <div class="col-lg-3 col-xs-6 col-sm-3"><div class="fun-facts-m"><div class="cell"><h2><i class="fa fa-car" aria-hidden="true"></i>500+</h2><p>Veículos Disponíveis</p></div></div></div>
+    <div class="col-lg-3 col-xs-6 col-sm-3"><div class="fun-facts-m"><div class="cell"><h2><i class="fa fa-car" aria-hidden="true"></i>1000+</h2><p>Alugueres Realizados</p></div></div></div>
+    <div class="col-lg-3 col-xs-6 col-sm-3"><div class="fun-facts-m"><div class="cell"><h2><i class="fa fa-user-circle-o" aria-hidden="true"></i>2000+</h2><p>Clientes Satisfeitos</p></div></div></div>
+  </div></div><div class="dark-overlay"></div></section>
+  <section class="section-padding testimonial-section parallex-bg"><div class="container div_zindex"><div class="section-header white-text text-center"><h2>Depoimentos de <span>Clientes</span></h2></div><div class="row"><div id="testimonial-slider"></div></div></div><div class="dark-overlay"></div></section>
+  <div id="site-footer">
+    <footer>
+      <div class="footer-top" style="background: #111; color: #fff; padding: 40px 0;"><div class="container"><div class="row">
+        <div class="col-md-4"><h6 style="color: #fff; text-transform: uppercase; font-weight: 700; margin-bottom: 20px; font-size: 16px;">Sobre Nós</h6><ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 8px;"><a href="page.html?type=aboutus" style="color: #ccc;">Sobre Nós</a></li>
+          <li style="margin-bottom: 8px;"><a href="page.html?type=privacy" style="color: #ccc;">Política de Privacidade</a></li>
+          <li style="margin-bottom: 8px;"><a href="page.html?type=terms" style="color: #ccc;">Termos e Condições</a></li>
+          <li style="margin-bottom: 8px;"><a href="admin/" style="color: #ccc;">Área Administrativa</a></li>
+        </ul></div>
+        <div class="col-md-4"><h6 style="color: #fff; text-transform: uppercase; font-weight: 700; margin-bottom: 20px; font-size: 16px;">Apoio ao Cliente</h6><div id="site-contact"></div></div>
+        <div class="col-md-4"><h6 style="color: #fff; text-transform: uppercase; font-weight: 700; margin-bottom: 20px; font-size: 16px;">Subscrever</h6><div class="newsletter-form">
+          <form method="post" id="newsletter-form"><div class="form-group"><input type="email" name="subscriberemail" class="form-control newsletter-input" required placeholder="Digite o seu E-mail" style="border-radius: 0; background: #222; color: #fff; border: 1px solid #444;"></div><button type="submit" class="btn btn-block" style="background: #fa2823; color: #fff; text-transform: uppercase; font-weight: bold; border-radius: 0; border: none;">Subscrever <span class="angle_arrow"><i class="fa fa-angle-right" aria-hidden="true"></i></span></button></form>
+          <p class="subscribed-text" style="color: #888; font-size: 12px; margin-top: 10px;">*Enviamos as melhores ofertas e novidades semanalmente para os nossos subscritores.</p>
+        </div></div>
+      </div></div></div>
+      <div class="footer-bottom" style="background: #000; padding: 15px 0; color: #888;"><div class="container"><div class="row">
+        <div class="col-md-6 col-md-push-6 text-right"><div class="footer_widget"><p style="display: inline-block; margin-right: 10px; color: #ccc;">Siga-nos:</p><ul style="display: inline-block; list-style: none; padding: 0;">
+          <li style="display: inline-block; margin: 0 3px;" title="Facebook: Ariel major"><a href="https://www.facebook.com/Ariel%20major" target="_blank" rel="noopener" style="color: #ccc;"><i class="fa fa-facebook-square" aria-hidden="true" style="font-size: 18px;"></i></a></li>
+          <li style="display: inline-block; margin: 0 3px;" title="X (Twitter): @Niavike"><a href="https://x.com/Niavike" target="_blank" rel="noopener" style="color: #ccc; display: inline-flex; align-items: center;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+          <li style="display: inline-block; margin: 0 3px;" title="Instagram: alien34586"><a href="https://www.instagram.com/alien34586" target="_blank" rel="noopener" style="color: #ccc;"><i class="fa fa-instagram" aria-hidden="true" style="font-size: 18px;"></i></a></li>
+          <li style="display: inline-block; margin: 0 3px;" title="WhatsApp"><a href="https://wa.me/258870880696" target="_blank" rel="noopener" style="color: #25D366;"><i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 18px;"></i></a></li>
+        </ul></div></div>
+        <div class="col-md-6 col-md-pull-6"><p class="copy-right" style="margin: 0;">Copyright &copy; <span id="site-year"></span> Portal de Aluguer de Carros. Todos os Direitos Reservados.</p></div>
+      </div></div></div>
+    </footer>
+  </div>
+  <div id="back-top" class="back-top"><a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a></div>
+  <div id="auth-modals"></div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/interface.js?v=2"></script>
+  <script src="assets/switcher/js/switcher.js"></script>
+  <script src="assets/js/bootstrap-slider.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/home.js?v=2"></script>
+  <script src="assets/js/auth.js?v=2"></script>
+  <script src="assets/js/site-shell.js?v=2"></script>
+  <script>
+    $(document).ready(function () {
+      $('#banner-slider').carousel({ interval: 3000, pause: false, wrap: true });
+    });
+  </script>
+</body>
+</html>

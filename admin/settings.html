@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Aluguer de Carros | Configurações do Site</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css"><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/dataTables.bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-social.css"><link rel="stylesheet" href="css/bootstrap-select.css"><link rel="stylesheet" href="css/fileinput.min.css"><link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css"><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="admin-header"></div><div class="ts-main-content"><div id="admin-sidebar"></div><div class="content-wrapper"><div class="container-fluid"><div class="row"><div class="col-md-12">
+    <h2 class="page-title" id="settings-title">Configurações</h2><div class="row"><div class="col-md-10"><div class="panel panel-default"><div class="panel-heading" id="settings-panel-title">Dados</div><div class="panel-body">
+      <form method="post" id="settings-form" class="form-horizontal" hidden>
+        <div class="form-group" id="page-select-group"><label class="col-sm-4 control-label" for="page-type">Selecionar Página</label><div class="col-sm-8"><select id="page-type" class="form-control"><option value="">*** Selecione uma Página ***</option><option value="terms">Termos e Condições</option><option value="privacy">Política de Privacidade</option><option value="aboutus">Sobre Nós</option><option value="faqs">Perguntas Frequentes (FAQs)</option></select></div></div>
+        <div class="form-group" id="selected-page-group"><label class="col-sm-4 control-label">Página Selecionada</label><div class="col-sm-8"><p class="form-control-static" id="selected-page-name"></p></div></div>
+        <div class="form-group" id="page-detail-group"><label class="col-sm-4 control-label" for="page-detail">Detalhes da Página</label><div class="col-sm-8"><textarea class="form-control" rows="8" name="detail" id="page-detail" required></textarea></div></div>
+        <div class="form-group contact-field"><label class="col-sm-4 control-label" for="contact-address">Endereço (Moçambique)</label><div class="col-sm-8"><textarea class="form-control" name="address" id="contact-address" required></textarea></div></div>
+        <div class="form-group contact-field"><label class="col-sm-4 control-label" for="contact-email">E-mail de Suporte</label><div class="col-sm-8"><input type="email" class="form-control" name="email" id="contact-email" required></div></div>
+        <div class="form-group contact-field"><label class="col-sm-4 control-label" for="contact-phone">Telefone / Contacto</label><div class="col-sm-8"><input type="text" class="form-control" name="contactno" id="contact-phone" required></div></div>
+        <div class="hr-dashed"></div><div class="form-group"><div class="col-sm-8 col-sm-offset-4"><button class="btn btn-primary" type="submit" id="settings-submit">Guardar Alterações</button></div></div>
+      </form>
+      <div id="settings-status" hidden></div>
+    </div></div></div></div>
+  </div></div></div></div>
+  <script src="js/jquery.min.js"></script><script src="js/bootstrap-select.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/admin-shell.js"></script><script src="js/settings.js"></script>
+</body></html>

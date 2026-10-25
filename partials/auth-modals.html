@@ -1,0 +1,45 @@
+<div class="modal fade" id="loginform">
+  <div class="modal-dialog" role="document"><div class="modal-content">
+    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="modal-title">Entrar na Conta</h3></div>
+    <div class="modal-body"><div class="row"><div class="login_wrap"><div class="col-md-12 col-sm-6">
+      <form method="post" data-auth-form="login">
+        <div class="form-group"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Endereço de E-mail <span style="color:red">*</span></label><input type="email" class="form-control" name="email" placeholder="Digite o seu e-mail" required></div>
+        <div class="form-group" style="position: relative;"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Senha <span style="color:red">*</span></label><input type="password" class="form-control" name="password" id="login_password" placeholder="Digite a sua senha" required style="padding-right: 40px;"><span onclick="togglePasswordVisibility('login_password', 'eye_icon_loginpass')" style="position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: #666; font-size: 16px; z-index: 10;" title="Mostrar/Ocultar Senha"><i class="fa fa-eye" id="eye_icon_loginpass"></i></span></div>
+        <div class="form-group"><input type="submit" value="Entrar" class="btn btn-block" style="background-color: #fa2823; border-color: #fa2823; color: #ffffff;"></div>
+      </form>
+    </div></div></div></div>
+    <div class="modal-footer text-center"><p>Ainda não tem uma conta? <a href="#signupform" data-toggle="modal" data-dismiss="modal">Registe-se aqui</a></p><p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">Esqueceu a senha?</a></p></div>
+  </div></div>
+</div>
+<div class="modal fade" id="signupform" tabindex="-1" role="dialog" style="overflow-x: hidden !important; overflow-y: auto !important; touch-action: pan-y;">
+  <div class="modal-dialog" role="document" style="overflow-x: hidden !important; touch-action: pan-y;"><div class="modal-content" style="max-height: 90vh; display: flex; flex-direction: column; overflow-x: hidden !important; touch-action: pan-y;">
+    <div class="modal-header" style="flex-shrink: 0;"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="modal-title">Criar Conta</h3></div>
+    <div class="modal-body" style="overflow-x: hidden !important; overflow-y: auto; max-height: calc(90vh - 120px); -webkit-overflow-scrolling: touch; flex-grow: 1; touch-action: pan-y;"><div class="row" style="margin-left: 0; margin-right: 0;"><div class="signup_wrap"><div class="col-md-12 col-sm-12" style="padding-left: 0; padding-right: 0;">
+      <form method="post" name="signup" data-auth-form="signup">
+        <div class="form-group"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Nome Completo <span style="color:red">*</span></label><input type="text" class="form-control" name="fullname" placeholder="Digite o seu nome completo" required></div>
+        <div class="form-group"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Número de Celular <span style="color:red">*</span></label><input type="text" class="form-control" name="mobileno" placeholder="Digite o seu número de celular (Ex: 870880696)" maxlength="15" required></div>
+        <div class="form-group"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Endereço de E-mail <span style="color:red">*</span></label><input type="email" class="form-control" name="emailid" id="emailid" placeholder="Digite o seu endereço de e-mail" required><span id="user-availability-status" style="font-size:12px;"></span></div>
+        <div class="form-group" style="position: relative;"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Senha <span style="color:red">*</span></label><input type="password" class="form-control" name="password" id="signup_password" placeholder="Digite a sua senha" minlength="8" required style="padding-right: 40px;"><span onclick="togglePasswordVisibility('signup_password', 'eye_icon_pass')" style="position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: #666; font-size: 16px; z-index: 10;" title="Mostrar/Ocultar Senha"><i class="fa fa-eye" id="eye_icon_pass"></i></span></div>
+        <div class="form-group" style="position: relative;"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Confirmar Senha <span style="color:red">*</span></label><input type="password" class="form-control" name="confirmpassword" id="signup_confirmpassword" placeholder="Confirme a sua senha" required style="padding-right: 40px;"><span onclick="togglePasswordVisibility('signup_confirmpassword', 'eye_icon_confirmpass')" style="position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: #666; font-size: 16px; z-index: 10;" title="Mostrar/Ocultar Senha"><i class="fa fa-eye" id="eye_icon_confirmpass"></i></span></div>
+        <div class="form-group checkbox"><input type="checkbox" id="terms_agree" required checked><label for="terms_agree">Concordo com os <a href="page.html?type=terms">Termos e Condições</a></label></div>
+        <div class="form-group"><input type="submit" value="Criar Conta" id="submit" class="btn btn-block" style="background-color: #fa2823; border-color: #fa2823; color: #ffffff;"></div>
+      </form>
+    </div></div></div></div>
+    <div class="modal-footer text-center"><p>Já possui uma conta? <a href="#loginform" data-toggle="modal" data-dismiss="modal">Entrar aqui</a></p></div>
+  </div></div>
+</div>
+<div class="modal fade" id="forgotpassword">
+  <div class="modal-dialog" role="document"><div class="modal-content">
+    <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h3 class="modal-title">Recuperar Senha</h3></div>
+    <div class="modal-body"><div class="row"><div class="forgotpassword_wrap"><div class="col-md-12">
+      <form name="chngpwd" method="post" data-auth-form="reset">
+        <div class="form-group"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Endereço de E-mail <span style="color:red">*</span></label><input type="email" name="email" class="form-control" placeholder="Digite o seu e-mail registado" required></div>
+        <div class="form-group"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Número de Celular <span style="color:red">*</span></label><input type="text" name="mobile" class="form-control" placeholder="Digite o seu número de celular registado" required></div>
+        <div class="form-group" style="position: relative;"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Nova Senha <span style="color:red">*</span></label><input type="password" name="newpassword" id="forgot_newpassword" class="form-control" placeholder="Digite a nova senha" minlength="8" required style="padding-right: 40px;"><span onclick="togglePasswordVisibility('forgot_newpassword', 'eye_icon_forgotnew')" style="position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: #666; font-size: 16px; z-index: 10;" title="Mostrar/Ocultar Senha"><i class="fa fa-eye" id="eye_icon_forgotnew"></i></span></div>
+        <div class="form-group" style="position: relative;"><label style="font-weight: 600; margin-bottom: 5px; color: #333;">Confirmar Nova Senha <span style="color:red">*</span></label><input type="password" name="confirmpassword" id="forgot_confirmpassword" class="form-control" placeholder="Confirme a nova senha" required style="padding-right: 40px;"><span onclick="togglePasswordVisibility('forgot_confirmpassword', 'eye_icon_forgotconfirm')" style="position: absolute; right: 12px; bottom: 8px; cursor: pointer; color: #666; font-size: 16px; z-index: 10;" title="Mostrar/Ocultar Senha"><i class="fa fa-eye" id="eye_icon_forgotconfirm"></i></span></div>
+        <div class="form-group"><input type="submit" value="Redefinir Senha" class="btn btn-block" style="background-color: #fa2823; border-color: #fa2823; color: #ffffff;"></div>
+      </form>
+      <div class="text-center"><p class="gray_text">Por motivos de segurança, a sua nova senha será atualizada diretamente no sistema.</p><p><a href="#loginform" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-double-left" aria-hidden="true"></i> Voltar ao Login</a></p></div>
+    </div></div></div></div>
+  </div></div>
+</div>

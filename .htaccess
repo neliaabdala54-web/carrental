@@ -1,0 +1,17 @@
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^index\.php$ /carrental/index.html [R=302,L]
+  RewriteRule ^car-listing\.php$ /carrental/car-listing.html [R=302,L]
+  RewriteRule ^vehical-details\.php$ /carrental/vehicle-details.html [R=302,L]
+  RewriteRule ^page\.php$ /carrental/page.html [R=302,L,QSA]
+  RewriteRule ^contact-us\.php$ /carrental/contact-us.html [R=302,L]
+  RewriteRule ^search\.php$ /carrental/search-results.html [R=302,L]
+  RewriteRule ^search-carresult\.php$ /carrental/search-results.html [R=302,L]
+  RewriteRule ^profile\.php$ /carrental/account.html?view=profile [R=302,L]
+  RewriteRule ^update-password\.php$ /carrental/account.html?view=password [R=302,L]
+  RewriteRule ^my-booking\.php$ /carrental/account.html?view=bookings [R=302,L]
+  RewriteRule ^post-testimonial\.php$ /carrental/account.html?view=post-testimonial [R=302,L]
+  RewriteRule ^my-testimonials\.php$ /carrental/account.html?view=testimonials [R=302,L]
+</IfModule>

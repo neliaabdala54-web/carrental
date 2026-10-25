@@ -1,0 +1,33 @@
+<header style="background-color: #ffffff; border-bottom: 2px solid #e2e8f0; height: 58px; min-height: 58px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.06);">
+  <nav id="navigation_bar" class="navbar navbar-default" style="background-color: #ffffff; margin: 0; border: none; height: 58px; min-height: 58px;">
+    <div class="container" style="height: 58px; display: flex; align-items: center; justify-content: space-between; width: 100%; padding-left: 15px; padding-right: 15px;">
+      <div class="navbar-header" style="display: flex; align-items: center; height: 58px;">
+        <button id="menu_slide" data-target="#navigation" aria-expanded="false" data-toggle="collapse" class="navbar-toggle collapsed" type="button" style="background-color: #111; border-color: #111; margin-top: 10px; margin-bottom: 10px; border-radius: 0;">
+          <span class="sr-only">Navegação</span><span class="icon-bar" style="background-color: #fff;"></span><span class="icon-bar" style="background-color: #fff;"></span><span class="icon-bar" style="background-color: #fff;"></span>
+        </button>
+        <div class="logo" style="display: flex; align-items: center; height: 58px; padding: 0;">
+          <a href="index.html" style="display: flex; align-items: center; height: 100%;"><img src="assets/images/logo.png" alt="Logo" style="max-height: 38px; width: auto; object-fit: contain;"></a>
+        </div>
+      </div>
+      <div class="collapse navbar-collapse" id="navigation" style="height: 58px !important; padding: 0; margin-left: auto; margin-right: 20px;">
+        <ul class="nav navbar-nav" style="margin: 0; display: flex; align-items: center; height: 58px;">
+          <li style="height: 58px;"><a href="index.html" class="custom-nav-link">Início</a></li>
+          <li style="height: 58px;"><a href="page.html?type=aboutus" class="custom-nav-link">Sobre nós</a></li>
+          <li style="height: 58px;"><a href="car-listing.html" class="custom-nav-link">Explorar</a></li>
+          <li style="height: 58px;"><a href="contact-us.html" class="custom-nav-link">Contacte-nos</a></li>
+        </ul>
+      </div>
+      <div class="header_wrap" style="display: flex; align-items: center; gap: 12px; height: 58px; padding: 0;">
+        <div class="header_search_box" style="display: flex; align-items: center; height: 36px;">
+          <form action="search-results.html" method="get" id="header-search-form" style="margin: 0; display: flex; align-items: center; background-color: #f1f5f9; border: 1px solid #e2e8f0; border-radius: 4px; padding: 0 8px; height: 36px; box-sizing: border-box;">
+            <input type="text" placeholder="Pesquisar..." name="q" class="form-control" required style="background: transparent; border: none; color: #1a202c; height: 36px; padding: 0 6px; font-size: 13px; outline: none; width: 140px; border-radius: 0; line-height: 36px; box-shadow: none;">
+            <button type="submit" style="background: transparent; border: none; color: #fa2823; font-size: 14px; cursor: pointer; padding: 0 4px; height: 36px; display: flex; align-items: center;"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </form>
+        </div>
+        <div class="user_login" id="user-login" style="display: flex; align-items: center; height: 36px;">
+          <a href="#loginform" class="btn header-btn-uniform" data-toggle="modal" data-dismiss="modal" style="background-color: #fa2823; color: #ffffff; border: none; text-decoration: none;">Entrar / Cadastrar</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

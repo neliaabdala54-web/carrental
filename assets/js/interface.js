@@ -1,12 +1,17 @@
 ﻿( function($) {
   'use strict';
 $(function(e) {
+	function initOwl(selector, options) {
+		var carousel = $(selector);
+		if ($.fn.owlCarousel && carousel.length && carousel.children().length) {
+			carousel.owlCarousel(options);
+		}
+	}
 	
 /*------------------------------------------------------------------
 	Testimonial Slider
 	-------------------------------------------------------------------*/
-	var owl = $("#testimonial-slider");
-	owl.owlCarousel({
+	initOwl("#testimonial-slider", {
 	  itemsCustom : [
 		[0, 1],
 		[450, 1],
@@ -24,8 +29,7 @@ $(function(e) {
 /*------------------------------------------------------------------
 	Testimonial Slider 2
 	-------------------------------------------------------------------*/
-	var owl = $("#testimonial-slider-2");
-	owl.owlCarousel({
+	initOwl("#testimonial-slider-2", {
 	  itemsCustom : [
 		[0, 1],
 		[450, 1],
@@ -44,8 +48,7 @@ $(function(e) {
 /*------------------------------------------------------------------
 	Trending Slider
 	-------------------------------------------------------------------*/
-	var owl = $("#trending_slider");
-	owl.owlCarousel({
+	initOwl("#trending_slider", {
 	  itemsCustom : [
 		[0, 1],
 		[450, 1],
@@ -62,8 +65,7 @@ $(function(e) {
 /*------------------------------------------------------------------
 	Popular Brands
 	-------------------------------------------------------------------*/
-	var owl = $("#popular_brands");
-	owl.owlCarousel({
+	initOwl("#popular_brands", {
 	  itemsCustom : [
 		[0, 2],
 		[450, 2],
@@ -82,8 +84,7 @@ $(function(e) {
 /*------------------------------------------------------------------
 	Listing Image Slider { Style 1}
 	-------------------------------------------------------------------*/
-	var owl = $("#listing_img_slider");
-	owl.owlCarousel({
+	initOwl("#listing_img_slider", {
 	  itemsCustom : [
 		[0, 1],
 		[450, 1],
@@ -104,6 +105,7 @@ $(function(e) {
 /*------------------------------------------------------------------
 	Listing Image Slider { Style 2}
 	-------------------------------------------------------------------*/
+	if ($.fn.slick) {
 	$('.listing_images_slider').slick({
 	  slidesToShow: 1,
 	  slidesToScroll: 1,
@@ -119,11 +121,12 @@ $(function(e) {
 	  centerMode: true,
 	  focusOnSelect: true
 	});
+	}
 
 /*------------------------------------------------------------------
 	Price-Range
 	-------------------------------------------------------------------*/
-	$("#price_range").slider({});
+	if ($.fn.slider) $("#price_range").slider({});
 
 
 /*------------------------------------------------------------------

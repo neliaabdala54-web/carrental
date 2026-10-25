@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Aluguer de Carros | Resultados de Pesquisa</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/site-overrides.css?v=2">
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/owl.transitions.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/bootstrap-slider.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/switcher/css/switcher.css" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/red.css" title="red" media="all" data-default-color="true">
+  <link rel="alternate stylesheet" href="assets/switcher/css/orange.css" title="orange" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/blue.css" title="blue" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/pink.css" title="pink" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/green.css" title="green" media="all">
+  <link rel="alternate stylesheet" href="assets/switcher/css/purple.css" title="purple" media="all">
+  <link rel="shortcut icon" href="assets/images/favicon-icon/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+</head>
+<body>
+  <div id="site-switcher"></div>
+  <div id="site-header"></div>
+  <section class="page-header listing_page"><div class="container"><div class="page-header_wrap"><div class="page-heading"><h1 id="results-heading">Resultados da Pesquisa</h1></div><ul class="coustom-breadcrumb"><li><a href="index.html">Início</a></li><li>Resultados</li></ul></div></div><div class="dark-overlay"></div></section>
+  <section class="listing-page"><div class="container"><div class="row">
+    <div class="col-md-9 col-md-push-3"><div class="result-sorting-wrapper"><div class="sorting-count"><p><span id="vehicle-count">0</span> Carro(s) Encontrado(s)</p></div></div><div id="vehicle-list"></div></div>
+    <aside class="col-md-3 col-md-pull-9">
+      <div class="sidebar_widget"><div class="widget_heading"><h5><i class="fa fa-filter" aria-hidden="true"></i> Pesquisar Carro</h5></div><div class="sidebar_filter">
+        <form action="search-results.html" method="get">
+          <div class="form-group select"><select class="form-control" name="brand" id="brand-filter"><option value="">Selecionar Marca</option></select></div>
+          <div class="form-group select"><select class="form-control" name="category" id="category-filter"><option value="">Selecionar Categoria</option><option value="Sedan">Sedan</option><option value="SUV">SUV</option><option value="Picape">Picape</option><option value="Hatchback">Hatchback</option><option value="Van / Minibus">Van / Minibus</option><option value="Comercial / Carga">Comercial / Carga</option></select></div>
+          <div class="form-group select"><select class="form-control" name="fueltype" id="fueltype-filter"><option value="">Tipo de Combustível</option><option value="Gasolina">Gasolina</option><option value="Diesel">Diesel</option><option value="Híbrido">Híbrido</option><option value="Elétrico">Elétrico</option><option value="Gás">Gás</option></select></div>
+          <div class="form-group"><button type="submit" class="btn btn-block"><i class="fa fa-search" aria-hidden="true"></i> Pesquisar Carro</button></div>
+        </form>
+      </div></div>
+      <div class="sidebar_widget"><div class="widget_heading"><h5><i class="fa fa-car" aria-hidden="true"></i> Adicionados Recentemente</h5></div><div class="recent_addedcars"><ul id="recent-vehicles"></ul></div></div>
+    </aside>
+  </div></div></section>
+  <div id="site-footer"></div>
+  <div id="back-top" class="back-top"><a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i></a></div>
+  <div id="auth-modals"></div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/interface.js"></script>
+  <script src="assets/switcher/js/switcher.js"></script>
+  <script src="assets/js/bootstrap-slider.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script src="assets/js/site-shell.js"></script>
+  <script src="assets/js/catalog.js"></script>
+</body>
+</html>

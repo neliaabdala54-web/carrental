@@ -1,0 +1,190 @@
+.custom-nav-link {
+  color: #1a202c !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 58px !important;
+  padding: 0 16px !important;
+  display: block !important;
+  text-decoration: none !important;
+  text-transform: none !important;
+  transition: color 0.2s ease-in-out !important;
+}
+
+.custom-nav-link:hover,
+.custom-nav-link:focus {
+  color: #fa2823 !important;
+  background-color: transparent !important;
+}
+
+.navbar-nav {
+  margin: 0 !important;
+}
+
+.navbar-nav > li > a {
+  text-transform: none !important;
+}
+
+.dropdown-menu {
+  border-radius: 0 !important;
+}
+
+.header-btn-uniform {
+  height: 36px !important;
+  line-height: 36px !important;
+  padding: 0 16px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  border-radius: 4px !important;
+  text-transform: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+#header-search-form input::placeholder {
+  color: #64748b !important;
+  opacity: 0.8;
+}
+
+.btn,
+.btn-primary,
+.btn-danger,
+input[type="submit"].btn,
+button.btn,
+.header-btn-uniform,
+#submit {
+  background-color: #fa2823 !important;
+  border-color: #fa2823 !important;
+  color: #ffffff !important;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+input[type="submit"].btn:hover,
+input[type="submit"].btn:focus,
+button.btn:hover,
+button.btn:focus,
+.header-btn-uniform:hover,
+.header-btn-uniform:focus,
+#submit:hover,
+#submit:focus {
+  background-color: #d91e19 !important;
+  border-color: #d91e19 !important;
+  color: #ffffff !important;
+}
+
+.modal-footer a {
+  color: #fa2823;
+}
+
+.modal-footer a:hover {
+  color: #d91e19;
+}
+
+.errorWrap,
+.succWrap {
+  padding: 10px;
+  margin: 0 0 20px 0;
+  background: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);
+}
+
+.errorWrap {
+  border-left: 4px solid #dd3d36;
+}
+
+.succWrap {
+  border-left: 4px solid #5cb85c;
+}
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+#site-header {
+  height: 58px;
+}
+
+#site-header header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.account-shell .profile_wrap {
+  color: #f1f5f9;
+  background: #334155;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.account-shell .profile_wrap h4,
+.account-shell .profile_wrap h5,
+.account-shell .profile_wrap h6,
+.account-shell .profile_wrap p,
+.account-shell .profile_wrap b,
+.account-shell .profile_wrap strong,
+.account-shell .profile_wrap label,
+.account-shell .profile_wrap th,
+.account-shell .profile_wrap td,
+.account-shell .profile_wrap .form-group,
+.account-shell .profile_wrap .form-control-static {
+  color: #f1f5f9 !important;
+}
+
+.account-shell .profile_wrap .vehicle_title a,
+.account-shell .profile_wrap .vehicle_listing a:not(.btn) {
+  color: #f8fafc !important;
+}
+
+.account-shell .profile_wrap .vehicle_listing li {
+  border-bottom-color: rgba(241, 245, 249, 0.3);
+}
+
+.account-shell .profile_wrap .table,
+.account-shell .profile_wrap .table > thead > tr > th,
+.account-shell .profile_wrap .table > tbody > tr > td,
+.account-shell .profile_wrap .table > tbody > tr > th {
+  background: transparent;
+  color: #f1f5f9;
+  border-color: rgba(241, 245, 249, 0.3);
+}
+
+.account-shell .profile_wrap input.form-control,
+.account-shell .profile_wrap textarea.form-control {
+  color: #1f2937;
+  background: #ffffff;
+}
+
+.account-shell .profile_wrap .errorWrap,
+.account-shell .profile_wrap .succWrap {
+  color: #334155 !important;
+  background: #ffffff;
+}

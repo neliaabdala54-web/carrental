@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal de Aluguer de Carros | Publicar Veículo</title>
+  <link rel="stylesheet" href="css/font-awesome.min.css"><link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/dataTables.bootstrap.min.css"><link rel="stylesheet" href="css/bootstrap-social.css"><link rel="stylesheet" href="css/bootstrap-select.css"><link rel="stylesheet" href="css/fileinput.min.css"><link rel="stylesheet" href="css/awesome-bootstrap-checkbox.css"><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="admin-header"></div><div class="ts-main-content"><div id="admin-sidebar"></div><div class="content-wrapper"><div class="container-fluid">
+    <h2 class="page-title" id="vehicle-form-title">Publicar Novo Veículo</h2>
+    <form method="post" id="vehicle-form" class="form-horizontal" enctype="multipart/form-data">
+      <div class="row"><div class="col-md-12"><div class="panel panel-default"><div class="panel-heading">Informações Básicas do Veículo</div><div class="panel-body">
+        <div class="form-group"><label class="col-sm-2 control-label">Modelo do Veículo<span style="color:red">*</span></label><div class="col-sm-4"><input type="text" name="vehicletitle" class="form-control" placeholder="Ex: Corolla, Hilux, Fortuner" required></div><label class="col-sm-2 control-label">Selecionar Marca<span style="color:red">*</span></label><div class="col-sm-4"><select class="selectpicker form-control" name="brandname" required><option value="">Selecionar Marca</option></select></div></div>
+        <div class="form-group"><label class="col-sm-2 control-label">Matrícula<span style="color:red">*</span></label><div class="col-sm-4"><input type="text" name="licenseplate" class="form-control" placeholder="Ex: MM-123-MC" required></div><label class="col-sm-2 control-label">Série / Versão</label><div class="col-sm-4"><input type="text" name="seriesversion" class="form-control" placeholder="Ex: 2.8 GD-6, 1.8 VVT-i, Executivo"></div></div>
+        <div class="form-group"><label class="col-sm-2 control-label">Categoria<span style="color:red">*</span></label><div class="col-sm-4"><select class="selectpicker form-control" name="category" required><option value="">Selecionar Categoria</option><option>Sedan</option><option>SUV</option><option>Picape</option><option>Hatchback</option><option>Van / Minibus</option><option>Comercial / Carga</option></select></div><label class="col-sm-2 control-label">Tipo de Combustível<span style="color:red">*</span></label><div class="col-sm-4"><select class="selectpicker form-control" name="fueltype" required><option value="">Selecionar Combustível</option><option>Gasolina</option><option>Diesel</option><option>Híbrido</option><option>Elétrico</option><option>Gás</option><option>Petrol</option><option>CNG</option></select></div></div>
+        <div class="form-group"><label class="col-sm-2 control-label">Caixa de Velocidade<span style="color:red">*</span></label><div class="col-sm-4"><select class="selectpicker form-control" name="transmission" required><option value="">Selecionar Transmissão</option><option>Manual</option><option>Automática</option><option>CVT</option></select></div><label class="col-sm-2 control-label">Disponibilidade<span style="color:red">*</span></label><div class="col-sm-4"><select class="selectpicker form-control" name="statusavailability" required><option>Disponível</option><option>Não Disponível</option></select></div></div>
+        <div class="form-group"><label class="col-sm-2 control-label">Preço por Dia (MT)<span style="color:red">*</span></label><div class="col-sm-4"><input type="number" min="1" step="0.01" name="priceperday" class="form-control" placeholder="Ex: 2500" required></div><label class="col-sm-2 control-label">Ano do Modelo<span style="color:red">*</span></label><div class="col-sm-4"><input type="number" min="1900" max="2100" name="modelyear" class="form-control" placeholder="Ex: 2022" required></div></div>
+        <div class="form-group"><label class="col-sm-2 control-label">Capacidade de Lugares<span style="color:red">*</span></label><div class="col-sm-4"><input type="number" min="1" name="seatingcapacity" class="form-control" placeholder="Ex: 5" required></div></div>
+        <div class="hr-dashed"></div><div class="form-group"><label class="col-sm-2 control-label">Descrição Geral<span style="color:red">*</span></label><div class="col-sm-10"><textarea class="form-control" name="vehicalorcview" rows="3" placeholder="Escreva uma breve descrição do carro..." required></textarea></div></div>
+        <div class="hr-dashed"></div><div class="form-group"><div class="col-sm-12"><h4><b>Imagens do Veículo</b></h4><div id="vehicle-current-images" class="row"></div></div></div>
+        <div class="form-group"><div class="col-sm-4">Imagem 1 <span style="color:red">*</span><input type="file" name="img1" accept="image/jpeg,image/png,image/webp" required></div><div class="col-sm-4">Imagem 2 <span style="color:red">*</span><input type="file" name="img2" accept="image/jpeg,image/png,image/webp" required></div><div class="col-sm-4">Imagem 3 <span style="color:red">*</span><input type="file" name="img3" accept="image/jpeg,image/png,image/webp" required></div></div>
+        <div class="form-group"><div class="col-sm-4">Imagem 4 <span style="color:red">*</span><input type="file" name="img4" accept="image/jpeg,image/png,image/webp" required></div><div class="col-sm-4">Imagem 5<input type="file" name="img5" accept="image/jpeg,image/png,image/webp"></div></div>
+      </div></div></div></div>
+      <div class="row"><div class="col-md-12"><div class="panel panel-default"><div class="panel-heading">Acessórios e Recursos</div><div class="panel-body">
+        <div class="form-group">
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="airconditioner" name="airconditioner" value="1"><label for="airconditioner">Ar Condicionado</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="powerdoorlocks" name="powerdoorlocks" value="1"><label for="powerdoorlocks">Fecho Central das Portas</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="antilockbrakingsys" name="antilockbrakingsys" value="1"><label for="antilockbrakingsys">Sistema de Travões ABS</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="brakeassist" name="brakeassist" value="1"><label for="brakeassist">Assistente de Travagem</label></div></div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="powersteering" name="powersteering" value="1"><label for="powersteering">Direção Assistida</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="driverairbag" name="driverairbag" value="1"><label for="driverairbag">Airbag do Condutor</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="passengerairbag" name="passengerairbag" value="1"><label for="passengerairbag">Airbag do Acompanhante</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="powerwindow" name="powerwindow" value="1"><label for="powerwindow">Vidros Elétricos</label></div></div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="cdplayer" name="cdplayer" value="1"><label for="cdplayer">Leitor de CD / Bluetooth</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="centrallocking" name="centrallocking" value="1"><label for="centrallocking">Trancamento Central</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="crashcensor" name="crashcensor" value="1"><label for="crashcensor">Sensor de Colisão / Estacionamento</label></div></div>
+          <div class="col-sm-3"><div class="checkbox checkbox-inline"><input type="checkbox" id="leatherseats" name="leatherseats" value="1"><label for="leatherseats">Estofos em Pele</label></div></div>
+        </div>
+        <div class="form-group"><div class="col-sm-8 col-sm-offset-2"><button class="btn btn-default" type="reset">Cancelar</button> <button class="btn btn-primary" type="submit" id="vehicle-submit">Cadastrar Veículo</button></div></div>
+      </div></div></div></div>
+    </form>
+  </div></div></div>
+  <script src="js/jquery.min.js"></script><script src="js/bootstrap-select.min.js"></script><script src="js/bootstrap.min.js"></script><script src="js/admin-shell.js"></script><script src="js/vehicle-form.js"></script>
+</body></html>
