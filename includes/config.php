@@ -5,13 +5,12 @@
 |--------------------------------------------------------------------------
 | Configuração central da base de dados — Car Rental
 |--------------------------------------------------------------------------
-| Ambiente local: XAMPP
-| Base de dados: MySQL
-| Ligação: PDO
+| Backend: PHP + PDO
+| Alojamento: Render
+| Base de dados: MySQL na Aiven
 |--------------------------------------------------------------------------
 */
 
-// Evitar redefinir as constantes caso a configuração já tenha sido carregada.
 if (!defined('DB_HOST')) {
 
     $environment = strtolower(
@@ -21,48 +20,29 @@ if (!defined('DB_HOST')) {
     $configuredDbUser = getenv('CARRENTAL_DB_USER');
     $configuredDbPass = getenv('CARRENTAL_DB_PASS');
 
-    $remoteAddress = $_SERVER['REMOTE_ADDR'] ?? '';
-    $httpHost = $_SERVER['HTTP_HOST'] ?? '';
+    $isProduction = $environment === 'production';
 
-    $requestHost = strtolower(
-        (string) parse_url('http://' . $httpHost, PHP_URL_HOST)
-    );
-
-    $isLoopbackRequest =
-        in_array($remoteAddress, ['127.0.0.1', '::1'], true)
-        && in_array($requestHost, ['localhost', '127.0.0.1', '::1'], true);
-
-    $isLocalEnvironment =
-        PHP_SAPI === 'cli'
-        || (
-            $environment !== 'production'
-            && $isLoopbackRequest
-        );
-
-    // Em produção, exigir credenciais configuradas.
+    // Exigir credenciais em produção.
     if (
-        !$isLocalEnvironment
+        $isProduction
         && (
             $configuredDbUser === false
             || $configuredDbUser === ''
             || $configuredDbPass === false
+            || $configuredDbPass === ''
         )
     ) {
-        error_log(
-            'Car Rental: database credentials are not configured.'
-        );
+        error_log('Car Rental: database credentials are not configured.');
 
         http_response_code(500);
         exit('As credenciais da base de dados não estão configuradas.');
     }
 
-    // Parâmetros da ligação.
     define(
         'DB_HOST',
         getenv('CARRENTAL_DB_HOST') ?: '127.0.0.1'
     );
 
-    // Mantida a porta original; confirma a configuração do teu MySQL.
     define(
         'DB_PORT',
         getenv('CARRENTAL_DB_PORT') ?: '3307'
@@ -88,7 +68,7 @@ if (!defined('DB_HOST')) {
     );
 }
 
-// Criar a ligação PDO se ainda não existir.
+// Criar a ligação à base de dados.
 if (!isset($dbh) || !($dbh instanceof PDO)) {
 
     try {
@@ -100,21 +80,53 @@ if (!isset($dbh) || !($dbh instanceof PDO)) {
             DB_NAME
         );
 
+        $pdoOptions = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::ATTR_EMULATE_PREPARES => false,
+            PDO::ATTR_STRINGIFY_FETCHES => false,
+        ];
+
+        // Configurar SSL na Aiven em produção.
+        if ($isProduction) {
+
+            $caFile = getenv('CARRENTAL_DB_SSL_CA');
+
+            if (
+                $caFile === false
+                || $caFile === ''
+                || !is_file($caFile)
+                || !is_readable($caFile)
+            ) {
+                error_log(
+                    'Car Rental: SSL CA certificate is missing or unreadable.'
+                );
+
+                http_response_code(500);
+                exit('A configuração segura da base de dados está incompleta.');
+            }
+
+            if (!defined('PDO::MYSQL_ATTR_SSL_CA')) {
+                error_log('Car Rental: PDO MySQL SSL support is unavailable.');
+
+                http_response_code(500);
+                exit('O suporte SSL da base de dados não está disponível.');
+            }
+
+            // Definir o certificado CA para a ligação MySQL.
+            $pdoOptions[PDO::MYSQL_ATTR_SSL_CA] = $caFile;
+        }
+
         $dbh = new PDO(
             $dsn,
             DB_USER,
             DB_PASS,
-            [
-                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-                PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-                PDO::ATTR_EMULATE_PREPARES => false,
-                PDO::ATTR_STRINGIFY_FETCHES => false,
-            ]
+            $pdoOptions
         );
 
     } catch (PDOException $error) {
 
-        // Registar detalhes técnicos sem os mostrar aos visitantes.
+        // Registar o erro no servidor sem expor detalhes ao visitante.
         error_log(
             'Car Rental: database connection failed. '
             . $error->getMessage()
