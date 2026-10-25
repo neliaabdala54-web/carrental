@@ -8,9 +8,11 @@ ENV PORT=10000
 
 COPY . /var/www/html/
 
-RUN chown -R www-data:www-data /var/www/html
+COPY certs/ca.pem /etc/ssl/certs/aiven-ca.pem
+
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod 644 /etc/ssl/certs/aiven-ca.pem
 
 EXPOSE 10000
 
 CMD ["sh", "-c", "sed -i 's/Listen 80/Listen 10000/' /etc/apache2/ports.conf && sed -i 's/:80>/:10000>/' /etc/apache2/sites-available/000-default.conf && apache2-foreground"]
-COPY certs/ca.pem /etc/ssl/certs/aiven-ca.pem
